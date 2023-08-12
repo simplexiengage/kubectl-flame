@@ -3,8 +3,8 @@ package job
 import (
 	"fmt"
 
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/data"
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/version"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/data"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/version"
 	batchv1 "k8s.io/api/batch/v1"
 	apiv1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

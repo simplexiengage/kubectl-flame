@@ -1,5 +1,5 @@
-//: Copyright Verizon Media
-//: Licensed under the terms of the Apache 2.0 License. See LICENSE file in the project root for terms.
+// : Copyright Verizon Media
+// : Licensed under the terms of the Apache 2.0 License. See LICENSE file in the project root for terms.
 package cmd
 
 import (
@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/data"
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/handler"
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/kubernetes"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/data"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/handler"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/kubernetes"
 	v1 "k8s.io/api/core/v1"
 )
 
