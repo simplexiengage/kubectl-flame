@@ -2,8 +2,8 @@ package profiler
 
 import (
 	"bytes"
-	"github.com/VerizonMedia/kubectl-flame/agent/details"
-	"github.com/VerizonMedia/kubectl-flame/agent/utils"
+	"github.com/simplexiengage/kubectl-flame/agent/details"
+	"github.com/simplexiengage/kubectl-flame/agent/utils"
 	"os"
 	"os/exec"
 	"path"

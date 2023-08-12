@@ -1,5 +1,5 @@
-//: Copyright Verizon Media
-//: Licensed under the terms of the Apache 2.0 License. See LICENSE file in the project root for terms.
+// : Copyright Verizon Media
+// : Licensed under the terms of the Apache 2.0 License. See LICENSE file in the project root for terms.
 package job
 
 import (
@@ -10,8 +10,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/uuid"
 
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/data"
-	"github.com/VerizonMedia/kubectl-flame/cli/cmd/version"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/data"
+	"github.com/simplexiengage/kubectl-flame/cli/cmd/version"
 )
 
 type bpfCreator struct{}

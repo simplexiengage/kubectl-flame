@@ -10,34 +10,20 @@ builds:
     goos:
       - linux
       - darwin
-      - windows
     goarch:
       - amd64
-      - arm
       - arm64
-      - ppc64le
-    goarm: [6, 7]
     ldflags: |
-      -X github.com/VerizonMedia/kubectl-flame/cli/cmd/version.semver={{ .Tag }}
-      -X github.com/VerizonMedia/kubectl-flame/cli/cmd/version.date={{ .Date }}
-      -X github.com/VerizonMedia/kubectl-flame/cli/cmd/version.commit={{ .Commit }}
+      -X github.com/simplexiengage/kubectl-flame/cli/cmd/version.semver={{ .Tag }}
+      -X github.com/simplexiengage/kubectl-flame/cli/cmd/version.date={{ .Date }}
+      -X github.com/simplexiengage/kubectl-flame/cli/cmd/version.commit={{ .Commit }}
 archives:
   - id: kubectl-flame-archive
     name_template: |
       kubectl-flame_{{ .Tag }}_{{ .Os }}_{{ .Arch -}}
-      {{- with .Arm -}}
-        {{- if (eq . "6") -}}hf
-        {{- else -}}v{{- . -}}
-        {{- end -}}
       {{- end -}}
     builds:
       - kubectl-flame
-    replacements:
-      386: i386
-      amd64: x86_64
-    format_overrides:
-      - goos: windows
-        format: zip
     files: ["LICENSE"]
 checksum:
   name_template: 'checksums.txt'

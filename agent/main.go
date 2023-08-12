@@ -1,5 +1,5 @@
-//: Copyright Verizon Media
-//: Licensed under the terms of the Apache 2.0 License. See LICENSE file in the project root for terms.
+// : Copyright Verizon Media
+// : Licensed under the terms of the Apache 2.0 License. See LICENSE file in the project root for terms.
 package main
 
 import (
@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/VerizonMedia/kubectl-flame/agent/details"
-	"github.com/VerizonMedia/kubectl-flame/agent/profiler"
-	"github.com/VerizonMedia/kubectl-flame/api"
+	"github.com/simplexiengage/kubectl-flame/agent/details"
+	"github.com/simplexiengage/kubectl-flame/agent/profiler"
+	"github.com/simplexiengage/kubectl-flame/api"
 )
 
 func main() {

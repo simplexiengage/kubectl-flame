@@ -3,15 +3,16 @@ kind: Plugin
 metadata:
   name: flame
 spec:
-  homepage: https://github.com/VerizonMedia/kubectl-flame
+  homepage: https://github.com/simplexiengage/kubectl-flame
   shortDescription: Generate CPU flame graphs from pods
-  version: {{ .TagName }}
+  version: v1.0.0
   description: |
     Generate CPU flame graphs without restarting pods and with low overhead.
   caveats: |
     Currently supported languages: Go, Java (any JVM based language), Python, Ruby, and NodeJS.
   platforms:
-    - {{addURIAndSha "https://github.com/VerizonMedia/kubectl-flame/releases/download/{{ .TagName }}/kubectl-flame_{{ .TagName }}_darwin_x86_64.tar.gz" .TagName | indent 6 }}
+    - uri: https://github.com/simplexiengage/kubectl-flame/releases/download/v1.0.0/kubectl-flame_v1.0.0_darwin_amd64.tar.gz
+      sha256: eb68f2aa01db170b3ab705fbd2e760a61b9a5e3e2088b85b558b2d6eaf7d9861
       bin: kubectl-flame
       files:
         - from: kubectl-flame
@@ -22,7 +23,20 @@ spec:
         matchLabels:
           os: darwin
           arch: amd64
-    - {{addURIAndSha "https://github.com/VerizonMedia/kubectl-flame/releases/download/{{ .TagName }}/kubectl-flame_{{ .TagName }}_linux_x86_64.tar.gz" .TagName | indent 6 }}
+    - uri: https://github.com/simplexiengage/kubectl-flame/releases/download/v1.0.0/kubectl-flame_v1.0.0_darwin_arm64.tar.gz
+      sha256: 79ecd5d2c189da3f4a47631246b315c9bc0a845b08f57eb323c256b3a0d15e20
+      bin: kubectl-flame
+      files:
+        - from: kubectl-flame
+          to: .
+        - from: LICENSE
+          to: .
+      selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+    - uri: https://github.com/simplexiengage/kubectl-flame/releases/download/v1.0.0/kubectl-flame_v1.0.0_linux_amd64.tar.gz
+      sha256: aef417eff57987bfc2467423ed5abb2828acfc04d180fb00f7ff0009b81a1728
       bin: kubectl-flame
       files:
         - from: kubectl-flame
@@ -33,7 +47,8 @@ spec:
         matchLabels:
           os: linux
           arch: amd64
-    - {{addURIAndSha "https://github.com/VerizonMedia/kubectl-flame/releases/download/{{ .TagName }}/kubectl-flame_{{ .TagName }}_linux_arm64.tar.gz" .TagName | indent 6 }}
+    - uri: https://github.com/simplexiengage/kubectl-flame/releases/download/v1.0.0/kubectl-flame_v1.0.0_linux_arm64.tar.gz
+      sha256: 27c8996b36b985990cd8c126e88bbec8448039187f77bfcb120c988e54e6448e
       bin: kubectl-flame
       files:
         - from: kubectl-flame
@@ -44,14 +59,3 @@ spec:
         matchLabels:
           os: linux
           arch: arm64
-    - {{addURIAndSha "https://github.com/VerizonMedia/kubectl-flame/releases/download/{{ .TagName }}/kubectl-flame_{{ .TagName }}_windows_x86_64.zip" .TagName | indent 6 }}
-      bin: kubectl-flame.exe
-      files:
-        - from: kubectl-flame.exe
-          to: .
-        - from: LICENSE
-          to: .
-      selector:
-        matchLabels:
-          os: windows
-          arch: amd64

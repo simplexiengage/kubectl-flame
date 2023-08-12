@@ -3,7 +3,7 @@ package utils
 import (
 	"bufio"
 	"encoding/base64"
-	"github.com/VerizonMedia/kubectl-flame/api"
+	"github.com/simplexiengage/kubectl-flame/api"
 	"io/ioutil"
 	"os"
 )
