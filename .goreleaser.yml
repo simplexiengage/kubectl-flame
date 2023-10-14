@@ -20,7 +20,6 @@ archives:
   - id: kubectl-flame-archive
     name_template: |
       kubectl-flame_{{ .Tag }}_{{ .Os }}_{{ .Arch -}}
-      {{- end -}}
     builds:
       - kubectl-flame
     files: ["LICENSE"]
